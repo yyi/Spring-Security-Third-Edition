@@ -8,6 +8,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
@@ -17,7 +18,6 @@ import org.springframework.stereotype.Component;
  * {@link Authentication} by principal name.
  *
  * @author Rob Winch
- *
  */
 @Component
 public class SpringSecurityUserContext implements UserContext {
@@ -29,7 +29,7 @@ public class SpringSecurityUserContext implements UserContext {
     private final UserDetailsService userDetailsService;
 
     @Autowired
-    public SpringSecurityUserContext(CalendarService calendarService,UserDetailsService userDetailsService) {
+    public SpringSecurityUserContext(CalendarService calendarService, UserDetailsService userDetailsService) {
         if (calendarService == null) {
             throw new IllegalArgumentException("calendarService cannot be null");
         }
@@ -52,8 +52,9 @@ public class SpringSecurityUserContext implements UserContext {
         if (authentication == null) {
             return null;
         }
-        CalendarUser user = (CalendarUser) authentication.getPrincipal();
-        String email = user.getEmail();        if (email == null) {
+        User user = (User) authentication.getPrincipal();
+        String email = user.getUsername();
+        if (email == null) {
             return null;
         }
         CalendarUser result = calendarService.findUserByEmail(email);

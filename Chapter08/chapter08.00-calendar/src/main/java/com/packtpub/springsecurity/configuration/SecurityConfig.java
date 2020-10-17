@@ -2,7 +2,7 @@ package com.packtpub.springsecurity.configuration;
 
 import com.packtpub.springsecurity.repository.RememberMeTokenRepository;
 import com.packtpub.springsecurity.service.UserDetailsServiceImpl;
-import com.packtpub.springsecurity.web.authentication.rememberme.IpAwarePersistentTokenRepository;
+//import com.packtpub.springsecurity.web.authentication.rememberme.IpAwarePersistentTokenRepository;
 import com.packtpub.springsecurity.web.authentication.rememberme.JpaPersistentTokenRepository;
 import com.packtpub.springsecurity.web.authentication.rememberme.JpaTokenRepositoryCleaner;
 import org.slf4j.Logger;
