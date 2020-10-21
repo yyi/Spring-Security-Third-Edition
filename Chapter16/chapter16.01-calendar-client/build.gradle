@@ -23,7 +23,7 @@ apply from: 'docker.gradle'
 // Spring Security 4, for chapter 16
 version = "4.16.01-SNAPSHOT"
 
-mainClassName = "com.packtpub.springsecurity.CalendarClientApplication"
+//mainClassName = "com.packtpub.springsecurity.CalendarClientApplication"
 
 dependencies {
 
@@ -86,7 +86,7 @@ jar {
  */
 springBoot  {
     buildInfo()
-    mainClassName = "com.packtpub.springsecurity.CalendarClientApplication"
+  //  mainClassName = "com.packtpub.springsecurity.CalendarClientApplication"
 }
 
 /**
