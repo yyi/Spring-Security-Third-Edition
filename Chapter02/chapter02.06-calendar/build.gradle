@@ -117,8 +117,9 @@ war.doLast {
 war.dependsOn explodedWar
 
 tomcat {
-    httpPort = 8080
-    httpsPort = 8081
+    httpPort = 28080
+    httpsPort = 28081
+    stopPort = 28085
     enableSSL = true
 
     contextPath = "/"

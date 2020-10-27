@@ -1,17 +1,8 @@
 package com.packtpub.springsecurity.web.configuration;
 
-import com.packtpub.springsecurity.repository.RememberMeTokenRepository;
-import com.packtpub.springsecurity.web.authentication.rememberme.IpAwarePersistentTokenRepository;
-import com.packtpub.springsecurity.web.authentication.rememberme.JpaPersistentTokenRepository;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.web.filter.OrderedRequestContextFilter;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Description;
 import org.springframework.core.Ordered;
-import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
-import org.springframework.web.context.request.RequestContextListener;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

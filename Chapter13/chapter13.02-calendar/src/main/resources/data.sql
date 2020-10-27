@@ -42,7 +42,7 @@ insert into security_filtermetadata(id,ant_pattern,expression,sort_order) values
 -- insert into security_filtermetadata(id,ant_pattern,expression,sort_order) values (160, '/admin/**','@customWebExpression.isLocalHost(authentication, request) and hasRole("ADMIN")',60);
 insert into security_filtermetadata(id,ant_pattern,expression,sort_order) values (160, '/admin/**','hasRole("ADMIN")',60);
 -- insert into security_filtermetadata(id,ant_pattern,expression,sort_order) values (170, '/events/','hasRole("ADMIN")',70);
-insert into security_filtermetadata(id,ant_pattern,expression,sort_order) values (170, '/events/','hasRole("ADMIN")',70);
+insert into security_filtermetadata(id,ant_pattern,expression,sort_order) values (170, '/events/','local and hasRole("ADMIN")',70);
 insert into security_filtermetadata(id,ant_pattern,expression,sort_order) values (180, '/**','hasRole("USER")',80);
 
 -- the end --
